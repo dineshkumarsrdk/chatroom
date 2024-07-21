@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
             userName = userNameInputEle.value;
             if (userName) {
                 // redirecting to the chat page
-                window.location.href = `http://localhost:3000/chat?userName=${userName}`;
+                window.location.href = `/chat?userName=${userName}`;
             }
         });
     } else if (pageType === 'chat') {
         // loading socket library on client side 
-        const socket = io.connect('http://localhost:3000');
+        const socket = io.connect();
         // retrieving the userName from query paramater
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
