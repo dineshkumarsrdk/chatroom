@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* background-color: #181743; */
+    background-image: url('../images/wp4410743.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Home page */
+h2 {
+    text-align: center;
+    color: #06ba87;
+    font-family: cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#entry-form {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#entry-form div {
+    width: 30%;
+    box-shadow: 0px 1px 10px 1px rgb(0, 0, 40);
+    background-color: black;
+    padding: 3%;
+    border-radius: 3%;
+}
+
+/* Chat page */
+#main-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container>div {
+    width: 80%;
+    height: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px rgb(0, 0, 40);
+}
+
+/* chat container styling */
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#alert {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    color: rgb(251, 255, 0);
+    font-size: 0.8rem;
+    font-weight: 500;
+    justify-content: space-between;
+    height: 10%;
+}
+
+/* #alert div {
+    width: 33%;
+} */
+
+#user {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d609f6;
+    font-family: monospace, 'Courier New', Courier;
+}
+
+#user-joined {
+    display: flex;
+    justify-content: center;
+}
+
+#chat-input {
+    width: 100%;
+    display: flex;
+}
+
+.message-display {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; scroll not working instead add margin top to first child*/
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.message-display> :first-child {
+    margin-top: auto !important;
+}
+
+.message-display::-webkit-scrollbar {
+    display: none;
+}
+
+.message-container {
+    min-width: fit-content;
+    max-width: 60%;
+    max-height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: white;
+    margin: 2%;
+}
+
+.right {
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.7rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(12, 184, 72);
+    margin: 1%;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.right .message {
+    align-items: flex-end;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgb(12, 184, 72);
+}
+
+.timestamp {
+    width: 100%;
+    font-size: 0.7rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(159, 159, 159);
+}
+
+.message-text {
+    min-width: 40%;
+    width: fit-content;
+    padding: 2% 5%;
+    background-image: linear-gradient(to right, #3a7fd9, #971eaa);
+    border-radius: 5px;
+}
+
+/* online users container styling */
+#aside-container {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(11, 11, 11);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+}
+
+#aside-container #online-heading {
+    text-align: center;
+}
+
+#online-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    border-top: solid 1px rgb(126, 126, 126);
+}
+
+#online-container::-webkit-scrollbar {
+    display: none;
+}
+
+#online-container div {
+    margin: 2%;
+}
+
+#online-container i {
+    color: #6fff80;
+    font-size: 0.7rem;
+}
+
+/* media queries smaller devices */
+@media screen and (max-width: 500px) {
+    /* chat page */
+    /* #main-container {
+        height: 88% ;
+    } */
+    html {
+        background-color: black;
+    }
+    #main-container>div {
+        width: 95%;
+        flex-wrap: wrap;
+    }
+    #chat-container {
+        width: 80%;
+        padding-bottom: 2%;
+    }
+    /* #aside-container {
+        width: 20%;
+    } */
+    #chat-container {
+        width: 100%;
+        padding-bottom: 2%;
+    }
+    #aside-container {
+        width: 100%;
+        height: 30vh;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    #alert {
+        font-size: 0.5rem;
+    }
+
+    /* home page */
+    #entry-form>div {
+        width: 80%;
+    }
+}
