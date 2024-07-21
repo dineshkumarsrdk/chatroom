@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             userName = userNameInputEle.value;
             if (userName) {
                 // redirecting to the chat page
-                window.location.href = `http://localhost:3000/chat?userName=${userName}`;
+                window.location.href = `/chat?userName=${userName}`;
             }
         });
     } else if (pageType === 'chat') {
